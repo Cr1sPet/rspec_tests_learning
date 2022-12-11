@@ -10,6 +10,8 @@ group :test do
   gem 'rspec', '~> 3.10'
 end
 
+gem 'pry-byebug'
+
 group :development do
   gem 'rubocop', '~> 1.40', require: false
   gem 'rubocop-performance', require: false
