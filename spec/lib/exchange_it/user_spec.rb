@@ -4,11 +4,11 @@ RSpec.describe ExchangeIt::User do
   let(:user) { |ex| described_class.new(ex.metadata[:name] || 'Bob', ex.metadata[:lastname] || 'Marlie') }
   let(:user_no_string_lastname) { described_class.new 'Bob', 10 }
 
-  it 'returns correct name' do
+  fit 'returns correct name' do
     expect(user.name).to eq('Bob')
   end
 
-  it 'returns correct lastname' do
+  fit 'returns correct lastname' do
     expect(user.lastname).to eq('Marlie')
   end
 
@@ -20,7 +20,7 @@ RSpec.describe ExchangeIt::User do
     expect(user_no_string_lastname.lastname).to be_an_instance_of(String)
   end
 
-  specify '#account' do
+  fspecify '#account' do
     expect(user.account).to be_an_instance_of(ExchangeIt::Account)
   end
 
